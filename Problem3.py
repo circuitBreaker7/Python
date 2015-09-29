@@ -37,7 +37,7 @@ while (y > 1):
 					break
 				temp += 1		
 			if not flag:
-				print(y)
+				print("The largest prime factor of", X, "is", y)
 				break
 	temp, flag = 2, 0
 	y -= 1
