@@ -1,9 +1,14 @@
-#The prime factors of 13195 are 5, 7, 13 and 29.
-#What is the largest prime factor of the number 600851475143 ?
-import math
+################
+## The Problem Statement
+##
+## The prime factors of 13195 are 5, 7, 13 and 29.
+## What is the largest prime factor of the number 600851475143 ?
+################
+## Brute Force Solution
+## This finds all the primes, then you can find the max pretty easily
+
 #X=13195
 
-#Brute Force, find all primes, as always
 #primeF = [];
 #y = 0
 #temp = 2
@@ -23,8 +28,17 @@ import math
 #	y += 1
 #print(primeF)
 
+################
+## Better Solution
+## 
+## Realizing we only care about the maximum prime
+## we can start at the largest possible number and 
+## then step down to the largest prime. 
+## We removed some computation by not searching for prime
+## of even numbers. We can easily add multiples of 3, 5, etc. 
+################
 
-# Hey, but we really only care about the largest!
+import math
 X = 600851475143
 y = (math.sqrt(X))//1
 temp, flag = 2, 0
